@@ -2,3 +2,65 @@
   font-family: sans-serif;
   text-align: center;
 }
+
+body {
+  background: #240041;
+}
+
+.modal {
+  background: #900048;
+  max-width: 16rem;
+  padding: 2rem 0;
+  border-radius: 0.2rem;
+}
+
+.icon {
+  color: #4e062a;
+  margin-right: 6px;
+}
+
+input {
+  background: none;
+  border: none;
+  outline: none;
+  color: #f51c88;
+  font-size: 0.9rem;
+}
+
+input::placeholder {
+  color: #490225;
+}
+
+.input-container {
+  margin-bottom: 0.5rem;
+}
+
+.input-container:last-child {
+  margin-bottom: 2rem;
+}
+
+.input-container::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 80%;
+  margin: 0 auto;
+  background-color: #6b0410;
+}
+
+.login--button {
+  text-transform: uppercase;
+  width: 80%;
+  text-align: left;
+  padding: 0.6rem;
+  background-color: #d37a61;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+}
+
+.login--button:hover,
+.login--button:active {
+  background-color: #d37156;
+  box-shadow: 2px 2px 5px #0003;
+}
