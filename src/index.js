@@ -5,19 +5,44 @@ import EmailInputField from "./components/EmailInputField";
 import PasswordField from "./components/PasswordField";
 import "./styles.css";
 
-function App() {
-  return (
-    <div className="App">
-      <div className="modal">
-        <div className="all-inputs">
-          <InputTextField placeholder="Parmeet Singh" />
-          <EmailInputField placeholder="abc@gmail.com" />
-          <PasswordField />
-        </div>
-        <button className="login--button">Log In</button>
+class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      name: "",
+      email: "",
+      password: ""
+    };
+  }
+  onChange(event) {
+    this.setState({
+      [event.target.name]: event.target.value
+    });
+    console.log("on change works");
+  }
+  handleSubmit(event) {
+    event.preventDefault();
+    this.setState({});
+  }
+  render() {
+    return (
+      <div className="App">
+        <form className="modal" onSubmit={this.handleSubmit}>
+          <div className="all-inputs">
+            <InputTextField
+              placeholder="Parmeet Singh"
+              handleChange={this.onChange}
+              name="name"
+              value={this.state.name}
+            />
+            <EmailInputField placeholder="abc@gmail.com" />
+            <PasswordField />
+          </div>
+          <button className="login--button">Log In</button>
+        </form>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
 const rootElement = document.getElementById("root");

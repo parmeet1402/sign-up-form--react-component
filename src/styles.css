@@ -16,14 +16,14 @@ body {
 
 .icon {
   color: #4e062a;
-  margin-right: 6px;
+  margin-right: 0.6rem;
 }
 
 input {
   background: none;
   border: none;
   outline: none;
-  color: #f51c88;
+  color: #ffd2e8;
   font-size: 0.9rem;
 }
 
